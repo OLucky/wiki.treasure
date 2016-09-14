@@ -88,7 +88,7 @@ $(function() {
         {
             trs = trs.replace(/\s/g, '\+');
             console.log(trs);
-            var url = 'https://wikipedia.org/w/api.php?action=opensearch&datatype=json&limit=10&uselang=user&search=' + trs;
+            var url = 'https://wikipedia.org/w/api.php?action=opensearch&datatype=json&limit=10&uselang=user&search=' + trs + '&callback=?';
             $.getJSON(url, function(data) {
                 console.log(data);
                 srcResult = data;
