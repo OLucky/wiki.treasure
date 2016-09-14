@@ -1,0 +1,83 @@
+body {
+    background-image: url('img/bg.jpg');
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input {
+    background-color: transparent;
+    text-align: center;
+}
+
+.main {
+    margin-top: 100px;
+}
+
+.mage {
+    display: block;
+}
+
+.txt {
+    display: block;
+    border-radius: 25px;
+    text-align: justify;
+    background-image: url('img/parch-bg.jpg');
+    background-size: cover;
+    font-family: 'MedievalSharp', cursive;
+    font-size: 20px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.mg {
+    width: 300px;
+    position: fixed;
+    top: 38%;
+}
+
+.point {
+    width: 150px;
+    cursor: pointer;
+}
+
+.reslt {
+    opacity: 0;
+}
+
+.resltTXT {
+    opacity: 0;
+}
+
+.wikiReslt:link {
+    color: black;
+}
+
+.wikiReslt:hover {
+    color: #d8a937;
+}
+
+.punchable {
+    cursor: pointer;
+}
+
+#sacred {
+    padding-top: 10px;
+    background-image: url('img/book-cover.jpg');
+    background-size: cover;
+    cursor: pointer;
+    color: gold;
+    font-family: 'MedievalSharp', cursive;
+    margin-top: 40px;
+}
+
+#sub {
+    margin-top: 10px;
+}
+
+#knowledge {
+    text-align: center;
+    background-image: url('img/parch-bg.jpg');
+    font-family: 'MedievalSharp', cursive;
+}
