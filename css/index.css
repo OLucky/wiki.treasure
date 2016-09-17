@@ -1,9 +1,16 @@
+html{
+  height:100%;
+}
+
 body {
-    background-image: url('img/bg.jpg');
+    background-image: url('https://raw.githubusercontent.com/OLucky/wiki.treasure/master/css/img/bg.jpg');
+    background-size: cover;
     background-attachment: fixed;
+    height:100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
+
 }
 
 input {
@@ -11,30 +18,51 @@ input {
     text-align: center;
 }
 
-.main {
-    margin-top: 100px;
+.titleWrap{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 30%;
 }
 
-.mage {
-    display: block;
+.title{
+  align-self: center;
+  font-family: 'MedievalSharp', cursive;
+  color: #f4ea07;
+}
+
+.main{
+  text-align: center;
+  height: 70%;
+}
+
+@media (min-width:992px){
+.mageHouse {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
 }
 
 .txt {
-    display: block;
     border-radius: 25px;
     text-align: justify;
-    background-image: url('img/parch-bg.jpg');
+    background-image: url('https://raw.githubusercontent.com/OLucky/wiki.treasure/master/css/img/parch-bg.jpg');
     background-size: cover;
     font-family: 'MedievalSharp', cursive;
     font-size: 20px;
     padding: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .mg {
-    width: 300px;
-    position: fixed;
-    top: 38%;
+  max-height: 500px;
+  max-width: 300px;
+  height: auto;
+  width: auto;
 }
 
 .point {
@@ -48,6 +76,10 @@ input {
 
 .resltTXT {
     opacity: 0;
+}
+
+.wikiReslt{
+  color:black;
 }
 
 .wikiReslt:link {
@@ -64,12 +96,13 @@ input {
 
 #sacred {
     padding-top: 10px;
-    background-image: url('img/book-cover.jpg');
+    background-image: url('https://raw.githubusercontent.com/OLucky/wiki.treasure/master/css/img/book-cover.jpg');
     background-size: cover;
     cursor: pointer;
     color: gold;
     font-family: 'MedievalSharp', cursive;
     margin-top: 40px;
+    margin-bottom:15px;
 }
 
 #sub {
@@ -78,6 +111,15 @@ input {
 
 #knowledge {
     text-align: center;
-    background-image: url('img/parch-bg.jpg');
+    background-image: url('https://raw.githubusercontent.com/OLucky/wiki.treasure/master/css/img/parch-bg.jpg');
     font-family: 'MedievalSharp', cursive;
+    margin-top:-15px;
+}
+
+#head{
+  font-size: 30px;
+  text-align: center;
+}
+#descr{
+  font-size: 20px;
 }

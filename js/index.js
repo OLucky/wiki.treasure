@@ -13,7 +13,8 @@ $(function() {
             $('.resltTXT').animate({
                 'opacity': 0
             }, 500, function() {
-                $('.resltTXT').html('<b>' + srcResult[1][index] + '</b>' + '<br>' + srcResult[2][index]);
+                $('#head').html('<b>' + srcResult[1][index] + '</b>');
+                $('#descr').html(srcResult[2][index]);
                 $('.wikiReslt').attr('href', srcResult[3][index]);
                 $('.resltTXT').animate({
                     'opacity': 1
@@ -30,7 +31,8 @@ $(function() {
             $('.resltTXT').animate({
                 'opacity': 0
             }, 500, function() {
-                $('.resltTXT').html('<b>' + srcResult[1][index] + '</b>' + '<br>' + srcResult[2][index]);
+              $('#head').html('<b>' + srcResult[1][index] + '</b>');
+              $('#descr').html(srcResult[2][index]);
                 $('.wikiReslt').attr('href', srcResult[3][index]);
                 $('.resltTXT').animate({
                     'opacity': 1
@@ -41,7 +43,7 @@ $(function() {
 
     function angryMage() {
         $('.mageSpeech').html('Now thee did get me infuriated! Go wh\'rev\'r mine own charm shall sendeth thee!');
-        $('.mg').attr('src', 'css/img/angry-mage.png');
+        $('.mg').attr('src', 'https://raw.githubusercontent.com/OLucky/wiki.treasure/master/css/img/angry-mage.png');
         $('.placeForBtn').html('<button type="button" id="random" class="col-xs-offset-3 col-xs-6 btn btn-warning">Wherever!</button>');
     }
 
@@ -94,8 +96,11 @@ $(function() {
                 srcResult = data;
                 $('.reslt').remove();
                 index = 0;
-                $('.results').append("<div class='txt reslt col-xs-12'><img src='css/img/point-left.png' id='pointPrev' class='col-xs-3 col-md-2 point'></img>" +
-                    "<a class='wikiReslt'><p class='col-xs-6 col-md-8 resltTXT'></p></a><img src='css/img/point-right.png' id='pointNext' class='col-xs-3 col-md-2 point'></img></div>");
+                $('.results').append("<div class='txt reslt col-xs-12'>"+
+                "<img src='https://raw.githubusercontent.com/OLucky/wiki.treasure/master/css/img/point-left.png' id='pointPrev' class='col-xs-offset-2 col-xs-3 col-md-offset-4 col-md-2 point'></img>" +
+                "<img src='https://raw.githubusercontent.com/OLucky/wiki.treasure/master/css/img/point-right.png' id='pointNext' class='col-xs-3 col-md-2 point'></img>"+
+                "<a class='wikiReslt' target='_blank'><p id='head' class='col-xs-12 resltTXT'></p>"+
+                "<p id='descr' class='col-xs-12 resltTXT'></p></a></div>");
                 nextReslt();
                 $('.reslt').animate({
                     'opacity': 1
@@ -122,7 +127,7 @@ $(function() {
     });
 
     $('body').on('click', '#random', function() {
-        window.location.replace("https://wikipedia.org/wiki/Special:Random");
+        window.open("https://wikipedia.org/wiki/Special:Random", '_blank');
     });
 
     $('#sacred').on('click', function() {
